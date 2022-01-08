@@ -2,49 +2,69 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/clear.css">
-    <title>Техномарт - Каталог</title>    
+    <link rel="stylesheet" href="css/style.css">
+    <title>Техномарт - Каталог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <!-- Академия itKBR  by Liyan -->
     <header>
-        <div class="wrap-info">
+        <div class="warp-full wrap-info">
             <div class="conteiner">
                 <div class="info-line">
                     <a class="logo" href="index.html">
-                        <img src="img/logo.svg" width="108" height="18" alt="Лого Техномарт">
+                        <img src="img/logo.svg" width="108" height="18" alt="Логотип организации Техномарт">
                     </a>
-                    <form method="post" action="https://echo.htmlacademy.ru" class="search-form">
-                        <button type="submit" class="search-form__button"></button>
+                    <form method="post" action="url" class="search-form">
                         <input type="text" placeholder="Поиск:" class="search-form__input">
                     </form>
                     <ul class="booking-info">
-                        <li><a href="#" class="booking-info__item booking-info__item-market">Закладки: 0</a></li>
-                        <li><a href="#" class="booking-info__item booking-info__item-cart">Корзина: 0</a></li>
+                        <li class="booking-info__item">
+                            <a href="#" class="booking-info__link _link_market">Закладки: 0</a>
+                        </li>
+                        <li class="booking-info__item">
+                            <a href="#" class="booking-info__link _link_cart active">Корзина: 10</a>
+                        </li>
                     </ul>
                     <a href="#" class="booking-order">Оформить заказ</a>
                 </div><!--end info-line-->
             </div><!--end conteiner-->
         </div><!--end wrap-info-->
 
-        <div class="wrap-desc">
+        <div class="warp-full wrap-desc">
             <div class="conteiner">
                 <div class="info-block">
-                    <p class="info-desc">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-                    <div class="info-contact">
-                        <a href="tel:+78125550555" class="info-contact__link info-contact__linkl-tel">+7 (812) 555-05-55</a>
-                        <p class="info-contact__link info-contact__link-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                    </div>
+                    <p class="info-desc">Интернет-магазин <br>строительных материалов <br>и инструментов для ремонта<p>
+                    <address class="info-contact">
+                        <a href="tel:+78125550555" class="info-contact__tel">+7 (812) 555-05-55</a>
+                        <p class="info-contact__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                    </address>
                     <div class="info-auth">
-                        <a href="#" class="info-auth__link info-auth__link-in">Войти</a>
-                        <a href="#" class="info-auth__link info-auth__link-reg">Регистрация</a>
+                        <div class="info-auth-login">
+                            <a href="#" class="info-auth__link _link-auth">Равшан Джамшутович</a>
+                        </div>
+                        <div class="info-auth-profile">
+                            <ul class="profile-list">
+                                <li class="profile-list__item">
+                                    <a href="#" class="profile-list__link">Мои заказы</a>
+                                </li>
+                                <li class="profile-list__item">
+                                    <span  class="profile-list__delimer"></span>
+                                </li>
+                                <li class="profile-list__item">
+                                    <a href="#" class="profile-list__link">Личный кабинет</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div><!--end info-block-->
 
                 <nav class="main-nagivation">
                     <ul class="main-nav">
                         <li class="main-nav__item">
-                            <a href="#" class="main-nav__link">Каталог</a>
+                            <a href="index.html" class="main-nav__link">Главная</a>
                         </li>
                         <li class="main-nav__item">
                             <a href="#" class="main-nav__link">Компания</a>
@@ -69,7 +89,11 @@
             </div><!--end conteiner-->
         </div><!--end wrap-desc-->
     </header>
-    <main>
+  
+    <div style="height: 1629px">
+    </div>
+
+    <main class="hidden">
         <div class="conteiner">
             <!--Хлебные крошки-->
             <section class="part-breadcrumbs">
@@ -99,7 +123,7 @@
                 <div class="sort-caption">
                     <h3>Фильтр:</h3>
                 </div>
-                <form method="post" action="https://echo.htmlacademy.ru" class="filter-form">
+                <form method="post" action="url" class="filter-form">
                     <fieldset class="filter-form__select-price">
                         <legend>Цена:</legend>
                         <div class="filter-form__range">
@@ -160,7 +184,7 @@
                 <div class="sort-caption">
                     <h3>СОРТИРОВКА:</h3>
                     <!--Панель сортировки-->
-                    <form method="post" action="https://echo.htmlacademy.ru" class="sort-form">
+                    <form method="post" action="url" class="sort-form">
                         <fieldset class="sort-form__groups">
                             <label for="groups_price" class="sort-form__radio-groups">
                                 <input type="radio" name="sort-groups" class="hidden" id="groups_price" value="groups_price" checked>
@@ -332,8 +356,8 @@
         </div><!--end wrap-product-desc-->
     </main>
     <footer>
-        <div class="wrap-footer-nav">
-            <div class="container">
+        <div class="wrap-full wrap-footer-nav">
+            <div class="conteiner">
                 <div class="footer-info-line">
                     <a class="logo footer-logo" href="index.html">
                         <img src="img/logo.svg" width="138" height="23" alt="Лого Техномарт">
@@ -343,13 +367,16 @@
                             <li class="second-nav__item"><a href="#" class="second-nav__link">Компания</a></li>
                             <li class="second-nav__item"><a href="#" class="second-nav__link">Новости</a></li>
                             <li class="second-nav__item"><a href="catalog.html" class="second-nav__link">Каталог</a></li>
-                            <li class="second-nav__item"><a href="#" class="second-nav__link">ДоСтавка</a></li>
-                            <li class="second-nav__item"><a href="#" class="second-nav__link">КоНтакты</a></li>
+                            <li class="second-nav__item"><a href="#" class="second-nav__link">Доставка</a></li>
+                            <li class="second-nav__item"><a href="#" class="second-nav__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="footer-info-line">
-                    <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+                <div class="footer-info-line _info-line_output">
+                    <address class="footer-info-contact">
+                        <p class="footer-info-contact__adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+                        <a class="footer-info-contact__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+                    </address>
                     <nav class="catalog-nav">
                         <ul class="catalog-nav">
                             <li class="catalog-nav__item"><a href="#" class="catalog-nav__link">Материалы</a></li>
@@ -363,34 +390,38 @@
         </div><!--end wrap-footer-nav-->
         
         <div class="wrap-footer-links">
-            <div class="container">
-                <div class="copyright">
-                    <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
-                </div>
-                <ul class="social-links">
-                    <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link-vk">
-                            <span class="hidden">Вконтакте</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link-fb">
-                            <span class="hidden">Фейсбук</span>
-                        </a>
-                    </li>
-                    <li class="social-links__item">
-                        <a href="#" class="social-links__link social-links__link-inst">
-                            <span class="hidden">Инстаграм</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="answer">
-                    <p class="answer__title">Обратная связь:</p>
-                    <a href="mailto:mail@htmlacademy.ru" class="answer__link">mail@htmlacademy.ru</a>
-                </div>                    
-                <div class="answer deverloper">
-                    <p class="answer__title">Разработано —</p>
-                    <a href="htmlacademy.ru" target="_blank" class="answer__link">htmlacademy.ru</a>
+            <div class="conteiner">
+                <div class="footer-info-line">
+                    <div class="copyright">
+                        <p class="copyright__info">© 2010–2019 Компания «Техномарт» <br>Все права защищены</p>
+                    </div>
+                    <ul class="social-links social-links_output">
+                        <li class="social-links__item">
+                            <a href="#" class="social-links__link _link-vk">
+                                <span class="hidden">Вконтакте</span>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a href="#" class="social-links__link _link-fb">
+                                <span class="hidden">Фейсбук</span>
+                            </a>
+                        </li>
+                        <li class="social-links__item">
+                            <a href="#" class="social-links__link _link-insta">
+                                <span class="hidden">Инстаграм</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="answer-info">
+                        <div class="answer">
+                            <p class="answer__title">Обратная связь:</p>
+                            <a href="mailto:mail@htmlacademy.ru" class="answer__link">mail@htmlacademy.ru</a>
+                        </div>                    
+                        <div class="answer">
+                            <p class="answer__title">Разработано —</p>
+                            <a href="htmlacademy.ru" target="_blank" class="answer__link">htmlacademy.ru</a>
+                        </div>
+                    </div>
                 </div>
             </div><!--end conteiner-->
         </div><!--end wrap-footer-links-->
@@ -411,5 +442,20 @@
         </button>
     </section>
     <!--End popup cart content-->
+
+    <script src="js/jquery.1.11.3.js"></script>
+    <script src="js/jquery.pixlayout.0.9.8.js"></script>
+    <script>
+        $(function(){
+            $.pixlayout({
+                src: "img/source/catalog.png",
+                opacity: 0.8,
+                top: 0,
+                center: true,
+                clip: true,
+                show: false,
+            });
+        });
+    </script>
 </body>
 </html>
