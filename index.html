@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Техномарт</title>
+    <title>Техномарт</title>  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Академия itKBR  by Liyan -->
@@ -44,7 +44,7 @@
                     <div class="info-auth">
                         <div class="info-auth-login">
                             <a href="#" class="info-auth__link _link-in">Войти</a>
-                            <a href="#" class="info-auth__link _link-reg">Регистрация</a>
+                            <a href="#" class="info-auth__link">Регистрация</a>
                             <!--выводится после авторизации
                             <a href="#" class="info-auth__link _link-auth">Равшан Джамшутович</a>-->
                         </div>
@@ -96,73 +96,70 @@
         </div><!--end wrap-desc-->
     </header>
 
-    <div style="height: 2531px">
-    </div>
-
-    <main class="hidden">
+    <main>
         <div class="conteiner">
             <!--Слайдер-->
-            <!--про картинку с разметкой блоков в курсе, для учёбы хочу так реализовать на флексах, если что, то переделаю -->
             <section class="part-catalog">
                 <h2 class="hidden">Разделы каталога</h2>
                 <ul class="catalog-links">
-                    <li class="catalog-links__item catalog-links__item-material new">
+                    <li class="catalog-links__item catalog-links__item-device _device-1 new">
                         <span class="catalog-links__name">Материалы</span>
                         <a href="#" class="catalog-links__link">на любой вкус</a>
                     </li>
-                    <li class="catalog-links__item catalog-links__item-tool">
+                    <li class="catalog-links__item catalog-links__item-device _device-2">
                         <span class="catalog-links__name">Инструмент</span>
                         <a href="#" class="catalog-links__link">на все случаи</a>
                     </li>
-                    <li class="catalog-links__item catalog-links__item-technics">
+                    <li class="catalog-links__item catalog-links__item-device _device-3">
                         <span class="catalog-links__name">Техника</span>
                         <a href="#" class="catalog-links__link">для стройки</a>
                     </li>
-                    <li class="catalog-links__item catalog-links__item-discount">
+                    <li class="catalog-links__item catalog-links__item-device _device-4">
                         <span class="catalog-links__name">Скидки 50%</span>
                         <a href="#" class="catalog-links__link">на 350 товаров</a>
                     </li>
-                    <li class="catalog-links__item catalog-links__item-deliver">
+                    <li class="catalog-links__item catalog-links__item-device _device-5">
                         <span class="catalog-links__name">Доставка</span>
                         <a href="#" class="catalog-links__link">бесплатно</a>
                     </li>
+                    <li class="catalog-links__item catalog-links__item-slider">
+                        <div class="main-slider">
+                            <div class="slider">
+                                <figure class="slider__item  hidden">
+                                    <img src="demo/slide1.jpg" width="620" height="266" alt="Дрели" class="slider__img">
+                                    <figcaption class="slider__name">
+                                        <h3>Дрели</h3>
+                                        <p>Соседям на радость!</p>
+                                        <a href="#" class="btn-base slider__link">открыть каталог</a><!--href  catalog/Дрели-->
+                                    </figcaption>
+                                </figure>
+                                <figure class="slider__item current">
+                                    <img src="demo/slide2.jpg" width="620" height="266" alt="Перфораторы" class="slider__img">
+                                    <figcaption class="slider__name">
+                                        <h3>Перфораторы</h3>
+                                        <p>Настоящие мужские игрушки</p>
+                                        <a href="#" class="btn-base slider__link">открыть каталог</a><!--href  catalog/Перфораторы-->
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <button  class="slider-arrow__btn slider-arrow__btn-prev">
+                                <span class="hidden">Назад</span>
+                            </button>
+                            <button disabled class="slider-arrow__btn slider-arrow__btn-next">
+                                <span class="hidden">Вперед</span>
+                            </button>
+                            <div class="slider-nav">
+                                <button class="slider-nav__item">
+                                    <span class="hidden">Дрели</span>
+                                </button>
+                                <button class="slider-nav__item active">
+                                    <span class="hidden">Перфораторы</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-                <div class="main-slider">
-                    <div class="slider">
-                        <figure class="slider__item">
-                            <img src="demo/slide1.jpg" width="620" height="266" alt="Дрели" class="slider__img">
-                            <figcaption class="slider__name">
-                                <h3>Дрели</h3>
-                                <p>Соседям на радость!</p>
-                                <a href="#" class="btn-base slider__link slider__link-btn">открыть каталог</a><!--href  catalog/Дрели-->
-                            </figcaption>
-                        </figure>
-                        <figure class="slider__item current">
-                            <img src="demo/slide2.jpg" width="620" height="266" alt="Перфораторы" class="slider__img">
-                            <figcaption class="slider__name">
-                                <h3>Перфораторы</h3>
-                                <p>Настоящие мужские игрушки</p>
-                                <a href="#" class="btn-base slider__link slider__link-btn">открыть каталог</a><!--href  catalog/Перфораторы-->
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div class="slider-arrows">
-                        <button  class="slider-arrow__btn slider-arrow__btn-prev">
-                            <span class="hidden">Назад</span>
-                        </button>
-                        <button disabled class="slider-arrow__btn slider-arrow__btn-next">
-                            <span class="hidden">Вперед</span>
-                        </button>
-                    </div>
-                    <div class="slider-nav">
-                        <button class="slider-nav__item">
-                            <span class="hidden">Дрели</span>
-                        </button>
-                        <button class="slider-nav__item active">
-                            <span class="hidden">Перфораторы</span>
-                        </button>
-                    </div>
-                </div>
+
             </section><!--end part-catalog-->
 
             <!--Популярные товары-->
@@ -174,50 +171,51 @@
 
                 <ul class="product">
                     <li class="product__item">
+                        <div class="product-links">
+                            <a href="#" class="product-links__link product-links__link-buy">Купить</a>
+                            <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
+                        </div>
                         <div class="product__img">
                             <img src="demo/bosh_bfg_9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                         </div>
-                        <h3>Перфоратор BOSCH BFG 9000</h3>
+                        <h3>Перфоратор BOSCH <br>BFG 9000</h3>
+                        <p class="product__price-old">32500 Р.</p>
+                        <p class="product__price">25500 Р.</p>
+                    </li>
+                    <li class="product__item new">
                         <div class="product-links">
                             <a href="#" class="product-links__link product-links__link-buy">Купить</a>
                             <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
                         </div>
-                        <p class="product__price product__price-old">32500 Р.</p>
-                        <p class="product__price">25500 Р.</p>
-                    </li>
-                    <li class="product__item">
                         <div class="product__img">
                             <img src="demo/bosh_bfg_3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                         </div>
-                        <h3>Перфоратор BOSCH BFG 3000</h3>
-                        <div class="product-links">
-                            <a href="#" class="product-links__link product-links__link-buy">Купить</a>
-                            <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
-                        </div>
-                        <p class="product__price product__price-old">22500 Р.</p>
+                        <h3>Перфоратор BOSCH <br>BFG 3000</h3>
+                        <p class="product__price-old">22500 Р.</p>
                         <p class="product__price">15500 Р.</p>
                     </li>
                     <li class="product__item">
+                        <div class="product-links">
+                            <a href="#" class="product-links__link product-links__link-buy">Купить</a>
+                            <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
+                        </div>
                         <div class="product__img">
                             <img src="demo/bosh_bfg_6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                         </div>
-                        <h3>Перфоратор BOSCH BFG 6000</h3>
+                        <h3>Перфоратор BOSCH <br>BFG 6000</h3>
+                        <p class="product__price-old">30500 Р.</p>
+                        <p class="product__price">25500 Р.</p>
+                    </li>
+                    <li class="product__item new">
                         <div class="product-links">
                             <a href="#" class="product-links__link product-links__link-buy">Купить</a>
                             <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
                         </div>
-                        <p class="product__price product__price-old">30500 Р.</p>
-                        <p class="product__price">25500 Р.</p>
-                    </li>
-                    <li class="product__item">
                         <div class="product__img">
                             <img src="demo/bosch_bfg_2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                         </div>
-                        <h3>Перфоратор BOSCH BFG 2000</h3>
-                        <div class="product-links">
-                            <a href="#" class="product-links__link product-links__link-buy">Купить</a>
-                            <a href="#" class="product-links__link product-links__link-marker">В закладки</a>
-                        </div>
+                        <h3>Перфоратор BOSCH <br>BFG 2000</h3>
+                        <p class="product__price-old"><span class="hidden">Цена не менялась</span></p>
                         <p class="product__price">12500 Р.</p>
                     </li>
                 </ul>
@@ -275,8 +273,10 @@
             </section><!--end part-popular-company-->
         </div><!--end conteiner-->
 
+        <div style="height: 1069px;"></div>
+
         <!--Сервис-->
-        <div class="wrap-service">
+        <div class="wrap-service hidden">
             <div class="conteiner">
                 <section class="part-service">
                     
@@ -319,7 +319,7 @@
         </div><!--end wrap-service-->
         
         <!--О компании. Контакты-->
-        <div class="conteiner">
+        <div class="conteiner  hidden">
             <section class="part-aboutus">
                 
                 <div class="about-company">
