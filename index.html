@@ -2,11 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Техномарт</title>  
+    <title>Техномарт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/slick/slick.min.1.8.1.css">
+    <link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Академия itKBR  by Liyan -->
@@ -125,7 +128,7 @@
                     <li class="catalog-links__item catalog-links__item-slider">
                         <div class="main-slider">
                             <div class="slider">
-                                <figure class="slider__item  hidden">
+                                <figure class="slider__item">
                                     <img src="demo/slide1.jpg" width="620" height="266" alt="Дрели" class="slider__img">
                                     <figcaption class="slider__name">
                                         <h3>Дрели</h3>
@@ -142,6 +145,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
+                            <!--
                             <button  class="slider-arrow__btn slider-arrow__btn-prev">
                                 <span class="hidden">Назад</span>
                             </button>
@@ -156,6 +160,7 @@
                                     <span class="hidden">Перфораторы</span>
                                 </button>
                             </div>
+                            -->
                         </div>
                     </li>
                 </ul>
@@ -273,44 +278,45 @@
             </section><!--end part-popular-company-->
         </div><!--end conteiner-->
 
-        <div style="height: 1069px;"></div>
-
         <!--Сервис-->
-        <div class="wrap-service hidden">
+        <div class="wrap-service">
             <div class="conteiner">
                 <section class="part-service">
                     
                     <div class="service-desc">
                         <div class="content-title">
                             <h2>Сервисы</h2>
-                            <p class="content-title__desk">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+                            <p class="content-title__desk">Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                         </div><!--end content-title-->
                     </div>
 
                     <!-- Вкладки по услугам -->
                     <div class="service-tabs">
                         <div class="tab-links">
-                            <button class="tab-links__btn" onclick="" disabled>Доставка</button><!--click for tabcontent-1 -->
-                            <button class="tab-links__btn" onclick="">Гарантия</button><!--click for tabcontent-2 -->
-                            <button class="tab-links__btn" onclick="">Кредит</button><!--click for tabcontent-3 -->
+                            <button class="tab-links__btn" data-content="tabcontent-1" disabled>Доставка</button><!--click for tabcontent-1 -->
+                            <button class="tab-links__btn" data-content="tabcontent-2">Гарантия</button><!--click for tabcontent-2 -->
+                            <button class="tab-links__btn" data-content="tabcontent-3">Кредит</button><!--click for tabcontent-3 -->
                         </div>
-                        <div id="tabcontent-1" class="service-tabs__content">
-                            <div class="content-title">
+                        <div id="tabcontent-1" class="tab-contents">
+                            <div class="tab-contents__item">
+                                <img src="img/pic-delivery.png" width="468" height="261" alt="Доставка">
                                 <h3>Доставка</h3>
-                                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>           
+                                <p>Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно! <br>Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>           
                             </div><!--end content-title-->
                         </div>
-                        <div id="tabcontent-2" class="service-tabs__content">
-                            <div class="content-title">
+                        <div id="tabcontent-2" class="tab-contents tab-contents_garant hidden">
+                            <div class="tab-contents__item">
+                                <img src="img/pic-garant.png" width="389" height="283" alt="Гарантия">
                                 <h3>Гарантия</h3>
-                                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                                <p>Если купленный у нас товар поломается или заискрит, <br>а также в случае пожара, спровоцированного его <br>возгоранием,  вы всегда можете быть уверены в нашей <br>гарантии. Мы обменяем сгоревший товар на новый. <br>Дом уж восстановите как-нибудь сами.</p>
                             </div><!--end content-title-->
                         </div>
-                        <div id="tabcontent-3" class="service-tabs__content">
-                            <div class="content-title">
+                        <div id="tabcontent-3" class="tab-contents tab-contents_credit  hidden">
+                            <div class="tab-contents__item">
+                                <img src="img/pic-credit.png" width="465" height="285" alt="Кредит">
                                 <h3>Кредит</h3>
-                                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-                                <button class="but-base service-tabs__btn" onclick="">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                <p>Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на помощь.</p>
+                                <a href="#popup-feedback" class="btn-base tab-contents__btn showpopup" onclick="">ОТПРАВИТЬ ЗАЯВКУ</a>
                             </div><!--end content-title-->
                         </div>
                     </div><!--end service-tabs-->
@@ -319,16 +325,16 @@
         </div><!--end wrap-service-->
         
         <!--О компании. Контакты-->
-        <div class="conteiner  hidden">
+        <div class="conteiner">
             <section class="part-aboutus">
                 
                 <div class="about-company">
                     <div class="content-title">
                         <h2>КОМПАНИЯ «Техномарт»</h2>
-                        <p  class="content-title__desk">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+                        <p  class="content-title__desk">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для <br>ремонта и строительства не оставит равнодушными любителей сэкономить на <br>гастарбайтерах.</p>
                     </div><!--end content-title-->
                     <div class="company-content">
-                        <p>Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:</p>
+                        <p class="company-content__desk">Мы можем доставить ваш товар в самые отдаленные точки России! <br>Техномарт работает со многими транспортными компаниями:</p>
                         <ul class="transport-lines">
                             <li class="transport-lines__item">Деловые линии</li>
                             <li class="transport-lines__item">Автотрейдинг</li>
@@ -341,11 +347,13 @@
                 <div class="about-contacts">
                     <div class="content-title">
                         <h2>КОНТАКТЫ</h2>
-                        <p class="content-title__desk">Вы можете забрать товар сами, заехав в наш офис:</p>
+                        <p class="content-title__desk">Вы можете забрать товар сами, <br>заехав в наш офис:</p>
                     </div><!--end content-title-->
-                    <div class="contacts-content">
-                        <iframe src="about:blank" width="300" height="158" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        <a class="btn-base contacts-content__btn">Заблудились? НапиШИТЕ НАМ!</a>
+                    <div class="contacts-content">                       
+                        <a href="#popup-map" class="showpopup">
+                            <img src="demo/map.jpg" width="300" height="158" alt="Как нас найти">
+                        </a>
+                        <a href="#popup-feedback" class="btn-base contacts-content__btn showpopup">Заблудились? НапиШИТЕ НАМ!</a>
                     </div><!--end contacts-content-->
                 </div><!--end about-contacts-->
 
@@ -425,40 +433,43 @@
     </footer>
 
     <!--Popup feedback content-->
-    <section class="popup hidden" id="popup-feedback">
+    <section class="popup" id="popup-feedback">
         <h2 class="hidden">Форма обращении</h2>
         <form class="feedback-form"  method="post" action="url">
-            <fieldset>
-                <label for="feedback-form__name">Ваше имя:</label>
-                <input type="text" name="name" placeholder="Имя Фамилия" class="feedback-form__name" id="feedback-form__name" required maxlength="255">
-            </fieldset>
-            <fieldset>
-                <label for="feedback-form__email">Ваш e-mail:</label>
-                <input type="email" name="email" placeholder="email@example.com" class="feedback-form__email" id="feedback-form__email" multiple required>
-            </fieldset>
-            <fieldset>
-                <label for="feedback-form__text">Текст письма:</label>
-                <textarea name="text" placeholder="В Cвободной форме" class="feedback-form__text" id="feedback-form__text" required></textarea>
-            </fieldset>
-            <button type="submit" class="but-base feedback-form__btn">Отправить</button>
+            <div class="feedback-form-wrap-field">
+                <div class="feedback-form-wrap">
+                    <fieldset>
+                        <label for="feedback-form__name" class="feedback-form__label">Ваше имя:</label>
+                        <input type="text" name="name" placeholder="Имя Фамилия" class="feedback-form__name" id="feedback-form__name" required maxlength="255">
+                    </fieldset>
+                    <fieldset>
+                        <label for="feedback-form__email"  class="feedback-form__label">Ваш e-mail:</label>
+                        <input type="email" name="email" placeholder="email@example.com" class="feedback-form__email" id="feedback-form__email" multiple required>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <label for="feedback-form__text" class="feedback-form__label">Текст письма:</label>
+                    <textarea name="text" placeholder="В Cвободной форме" class="feedback-form__text" id="feedback-form__text" required></textarea>
+                </fieldset>
+            </div>
+            <div class="feedback-form-wrap-btn">
+                <button type="submit" class="btn-base feedback-form__btn">Отправить</button>
+            </div>
         </form>
-        <button class="popup__close">
-            <span class="hidden">Закрыть</span>
-        </button>
     </section>
     <!--End popup feedback content-->
 
     <!--Popup map content-->
-    <section class="popup hidden" id="popup-map">
+    <section class="popup" id="popup-map">
         <h2 class="hidden">Как нас найти</h2>
-        <iframe src="about:blank" width="945" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <button class="popup__close">
-            <span class="hidden">Закрыть</span>
-        </button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6020195146568!2d30.32069076821187!3d59.93874581277697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1643564734080!5m2!1sru!2sru" width="945" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
     <!--End popup map content-->
 
-    <script src="js/jquery.1.11.3.js"></script>
+    <script src="js/jquery.1.11.3.js"></script>       
+    <script src="lib/slick/slick.min.1.8.1.js"></script>
+    <script src="lib/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/js.js"></script>   
     <script src="js/jquery.pixlayout.0.9.8.js"></script>
     <script>
         $(function(){

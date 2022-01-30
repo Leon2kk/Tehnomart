@@ -56,6 +56,10 @@ select,
 textarea {
     font-family: inherit;
 }
+/*popup*/
+.popup{
+    position: absolute;
+}
 
 /*tehnomart*/
 address{
@@ -755,17 +759,20 @@ body{
 .slider__link{
     margin-top: 114px;
 }
-.slider-arrow__btn{
+.slider-arrow__btn, .slick-arrow{
     position: absolute;
     top: calc(50% - 11px);
     width: 22px;
     height: 40px;
     background: url("../img/icon-left-arrow.svg") no-repeat center center;
+    text-indent: -9999px;
 }
-.slider-arrow__btn-prev{
+.slider-arrow__btn-prev, .slick-prev{
+    z-index: 1000;
     left: 24px;
 }
-.slider-arrow__btn-next{
+slick-prev slick-arrow
+.slider-arrow__btn-next, .slick-next{
     right: 24px;
     transform: rotate(180deg);
 }
@@ -777,7 +784,7 @@ body{
     display: flex;
     justify-content: center;
 }
-.slider-nav__item{
+.slider-nav li, .slider-nav__item{
     width: 10px;
     height: 10px;
     border: 2px solid #fff;
@@ -785,10 +792,18 @@ body{
     background-color: #fff;
     padding: 0;
     margin: 0 5px;
+    text-indent: -9999px;
+    cursor: pointer;
 }
-.slider-nav__item.active{
+.slider-nav__item.active, li.slick-active{
     background-color: #EE3643;
 }
+
+
+
+
+
+
 /*популярные товары*/
 .title-content{
     background-color: #F9F5F0;
@@ -1009,4 +1024,254 @@ body{
 .company__item:active{
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
     opacity: 0.5;
+}
+/*Сервис*/
+.wrap-service{
+    width: 1200px;
+    min-height: 522px;
+    background-color: #F1F5F7;
+    margin: 0 auto;
+    padding-top: 65px;
+    margin-top: 51px;
+}
+.service-desc{
+
+}
+.content-title h2{
+    color: #000;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.content-title__desk, .company-content__desk{
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 24px;
+}
+.company-content__desk{
+    line-height: 26px;
+}
+.service-tabs{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.tab-links{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    height: 279px;
+    position: relative;
+    justify-content: center;
+}
+.tab-links:after{
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 10px;
+    background: url(../img/shadow-right.svg) no-repeat 100% 50%;
+    height: 100%;
+}   
+.tab-links__btn{
+    height: 62px;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 22px;
+    padding-bottom: 2px;
+    background: #32425C;
+    box-shadow: 0px 1px 0px #293449, 0px 1px 0px #405069 inset;
+    color: #fff;
+}
+.tab-links__btn:hover{
+    background: #293449;
+}
+.tab-links__btn:disabled{
+    background: #fff;
+    color: #32425C;
+    box-shadow: none;
+}
+.tab-contents{
+    margin-left: 80px;
+    margin-top: 45px;
+    width: 100%;
+    min-height: 282px;
+    position: relative;
+}
+.tab-contents__item img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.tab-contents_garant img{
+    right: -8px;
+}
+.tab-contents_credit img{
+    right: -8px;
+}
+.tab-contents__item h3{
+    color: #32425C;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.tab-contents__item p{
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 30px;
+}
+/*О компании*/
+.part-aboutus{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 71px;
+    margin-bottom: 69px;
+}
+.transport-lines{
+    margin-top: 1px;
+}
+.transport-lines__item{
+    font-size: 18px;
+ 
+    color: #000;
+    padding-left: 38px;
+    position: relative;
+    margin-top: 15px;
+}
+.transport-lines__item:first-child{
+    margin-top: 0;
+}
+.transport-lines__item:before{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #EE3643;
+    left: 0;
+    top: 12px;
+}
+/*Костыль, что бы соответствовать макету*/
+.transport-lines__item:nth-child(2)::before{top: 10px;}
+.transport-lines__item:nth-child(3)::before{top: 8px;}
+/*конец*/
+
+.about-company__btn{
+    width: 220px;
+    margin-top: 21px;
+}
+
+.contacts-content{
+    margin-top: 32px;
+}
+.contacts-content__btn{
+    width: 100%;
+    margin-top: 19px;
+}
+.tab-contents__btn{
+    background-color: #FF5357;
+    border-radius: 2px;
+    margin-top: 24px;
+}
+
+.popup{
+    border-top: 7px solid #ee3643;
+    position: relative;
+    display: none;
+}
+.popup__close, .fancybox-close{
+    position: absolute;
+    top: 21px;
+    right: 11px;
+    width: 21px;
+    height: 21px;
+    background: url(../img/close.svg) no-repeat center center;
+    z-index: 1100;
+    transition-duration: 0.3s;
+}
+.popup__close:hover, .fancybox-close:hover{
+    transition-duration: 0.3s;
+    transform: rotate(45deg);
+}
+
+.feedback-form{
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.feedback-form-wrap-field{
+    margin: 0 80px;
+    margin-top: 26px;
+    width: 460px;
+}
+.feedback-form-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.feedback-form fieldset{
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    margin: 0;
+    margin-top: 14px;
+    padding: 0;
+}
+.feedback-form-wrap fieldset{
+    min-width: 216px;
+}
+.feedback-form__label{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+    margin-left: 2px;    
+}
+.feedback-form__name, .feedback-form__email, .feedback-form__text{
+    margin-top: 10px;
+    height: 38px;
+    width: 220px;
+    border: 2px solid #C5C5C5;
+    border-radius: 2px;
+    font-family: "PT Sans";
+    font-size: 13px;
+    color: #000;
+    padding-left: 10px;
+}
+.feedback-form__text{
+    padding-top: 10px;
+}
+
+.feedback-form__name::placeholder,
+.feedback-form__email::placeholder,
+.feedback-form__text::placeholder{
+    font-family: "PT Sans";
+    font-size: 13px;
+    color: #A9A9A9;
+}
+
+.feedback-form__text{
+    width: 100%;
+    height: 114px;
+}
+.feedback-form-wrap-btn{
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 37px 0;
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+}
+.feedback-form__btn{
+    width: 460px;
 }
