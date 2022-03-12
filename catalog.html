@@ -146,14 +146,15 @@
 
             <div class="title-content secondpage">
                 <h2>ПЕРФОРАТОРЫ</h2>
-            </div>
-            
+            </div>                          
             <div class="wrap-filter">
                 <!--Фильтр-->
                 <section class="part-filter">
-                    <div class="sort-caption">
+
+                    <div class="sort-caption sort-caption-showfilter">
                         <h3>Фильтр:</h3>
                     </div>
+                
                     <form method="post" action="url" class="filter-form">
                         <fieldset class="filter-form__select filter-form__select-price">
                             <legend>Цена:</legend>
@@ -212,8 +213,8 @@
                                 </li>
                             </ul>
                         </fieldset>
-               
-                            <button class="filter-form__btn" type="submit">Показать</button>
+            
+                        <button class="filter-form__btn" type="submit">Показать</button>
                         
                     </form>
                 </section><!--end part-filter-->
@@ -496,6 +497,11 @@
     <script src="js/js.js"></script>   
     <script src="js/jquery.pixlayout.0.9.8.js"></script>
     <script>
+$('.sort-caption-showfilter').click(function() {
+    $('.filter-form').slideToggle('300');
+  
+});
+    
        /* $(function(){
             $.pixlayout({
                 src: "img/source/catalog.png",
