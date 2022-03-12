@@ -29,3 +29,7 @@
         $(".showpopup").fancybox({
             padding : 0,		
         });
+        
+        $('.sort-caption-showfilter').click(function() {
+            $('.filter-form').slideToggle('300');          
+        });
